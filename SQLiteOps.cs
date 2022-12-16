@@ -38,10 +38,16 @@ namespace CodeGitz
 
         public static List<Posts> ReadTable()
         {
+            // Load Database
             using(IDbConnection conn = new SQLiteConnection(LoadConnectionString()))
             {
+                // SQL Query That Reads Everything From The Table "posts"
                 var sql = "SELECT * FROM posts";
+
+                // Execute Query and Convert it To Type List
                 var output = conn.Query<Posts>(sql).ToList();
+
+                // Return The List Of "posts" Objects
                 return output;
             }
         } 

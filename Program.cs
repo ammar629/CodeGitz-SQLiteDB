@@ -5,10 +5,10 @@
         static void Main(string[] args)
         {
             // Create The "posts" Table
-            //CreateTable();
+            CreateTable();
 
             // Insert Records Into "posts"
-            //InsertData();
+            InsertData();
 
             // Display Data Entries
             ReadTable();
